@@ -18,9 +18,10 @@ namespace Application.Activities
         {
             public CommandValidator()
             {
-                RuleFor(x => x.Activity).SetValidator(new ActivityValidator());
+                RuleFor(x => x.Activity).SetValidator(new ActivityValidator()); //va
             }
         }
+    
 
         public class Handler : IRequestHandler<Command>
         {
